@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage of Kyrgyzstan</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav.css">
+    <link rel="stylesheet" href="assets/css/transitions.css">
+    <!-- JS -->
+    <script src="assets/js/main-kg.js" defer></script>
+    <script src="assets/js/mobile-nav.js" defer></script>
+    <script src="assets/js/transitions.js"></script>
+</head>
+<body>
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar">
+        <a href="index-kg.html" class="logo">Heritage Kyrgyzstan</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-country">
+                <details>
+                    <summary>Kyrgyzstan <span>&#9662;</span></summary>
+                    <div class="country-menu">
+                        <a href="index-kg.html">Kyrgyzstan</a>
+                        <a href="index-tj.html">Tajikistan</a>
+                        <a href="index-kz.html">Kazakhstan</a>
+                    </div>
+                </details>
+            </li>
+            <li><a href="map-kg.html">Interactive Map</a></li>
+            <li><a href="gallery-kg.html">Gallery</a></li>
+            <li><a href="panorama-kg.html">Panorama</a></li>
+            <li><a href="videos-kg.html">Videos</a></li>
+            <li><a href="about-kg.html">About</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Heritage of Kyrgyzstan</h1>
+            <p>
+                Discover the country's remarkable cultural and historical
+                heritage through interactive maps, photography,
+                virtual tours and immersive experiences.
+            </p>
+            <a href="map-kg.html" class="btn">Explore Interactive Map</a>
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-angles-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= STATS BAR ================= -->
+    <section class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-number" data-target="325">0+</span>
+                <span class="stat-label">Heritage Sites Mapped</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="583">0</span>
+                <span class="stat-label">Sites in Source Dataset</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURED PLACES ================= -->
+    <section class="featured-section">
+        <div class="section-header">
+            <span class="section-tag">Featured</span>
+            <h2>Places to Start With</h2>
+            <p>A small taste of what's on the map — explore the full collection for the rest.</p>
+        </div>
+
+        <div class="places-track-wrap">
+            <div class="places-track" id="placesTrack">
+                <!-- Card 1: Burana Tower -->
+                <div class="place-card">
+                    <div class="place-img-wrap">
+                        <span class="place-cat-badge monument">Minaret</span>
+                        <img src="assets/images/gallery/burana-tower.jpg"
+                             alt="Burana Tower"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Chüy Region
+                        </div>
+                        <h3 class="place-name">Burana Tower</h3>
+                        <p class="place-desc">
+                            An 11th-century minaret and the last standing structure
+                            of the ancient Silk Road city of Balasagun.
+                        </p>
+                        <div class="place-actions">
+                            <button class="place-link place-detail-btn" data-place="burana">
+                                More Details <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <a href="map-kg.html?site=Burana%20Tower" class="place-link place-map-link">
+                                Show on Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Tash Rabat -->
+                <div class="place-card">
+                    <div class="place-img-wrap">
+                        <span class="place-cat-badge arch">Caravanserai</span>
+                        <img src="assets/images/gallery/tash-rabat.jpg"
+                             alt="Tash Rabat"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Naryn Region
+                        </div>
+                        <h3 class="place-name">Tash Rabat</h3>
+                        <p class="place-desc">
+                            A remarkably preserved 15th-century stone caravanserai
+                            tucked high in the Tian Shan mountains.
+                        </p>
+                        <div class="place-actions">
+                            <button class="place-link place-detail-btn" data-place="tashrabat">
+                                More Details <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <a href="map-kg.html?site=Tash%20Rabat" class="place-link place-map-link">
+                                Show on Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Shyrdakbek Fortress -->
+                <div class="place-card">
+                    <div class="place-img-wrap">
+                        <span class="place-cat-badge arch">Fortress</span>
+                        <img src="assets/images/gallery/shyrdakbek-fortress.jpg"
+                             alt="Shyrdakbek Fortress"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Ak-Tala District, Naryn
+                        </div>
+                        <h3 class="place-name">Shyrdakbek Fortress</h3>
+                        <p class="place-desc">
+                            A 10th-12th century fortified settlement whose massive earthen
+                            walls are linked in folklore to the hero Shyrdakbek.
+                        </p>
+                        <div class="place-actions">
+                            <button class="place-link place-detail-btn" data-place="shyrdakbek">
+                                More Details <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <a href="map-kg.html?site=Городище%20Шырдакбек" class="place-link place-map-link">
+                                Show on Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Tailak Baatyr Mausoleum -->
+                <div class="place-card">
+                    <div class="place-img-wrap">
+                        <span class="place-cat-badge tomb">Mausoleum</span>
+                        <img src="assets/images/gallery/tailak-baatyr-mausoleum.jpg"
+                             alt="Tailak Baatyr Mausoleum"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Ak-Tala District, Naryn
+                        </div>
+                        <h3 class="place-name">Tailak Baatyr Mausoleum</h3>
+                        <p class="place-desc">
+                            A 19th-century mausoleum honoring the Kyrgyz warrior Tailak
+                            Baatyr, part of a group of eight historic tombs near Kurtka.
+                        </p>
+                        <div class="place-actions">
+                            <button class="place-link place-detail-btn" data-place="tailakbaatyr">
+                                More Details <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <a href="map-kg.html?site=Tailak%20Baatyr%20Mausoleum" class="place-link place-map-link">
+                                Show on Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Cholok-Korgon Fortress -->
+                <div class="place-card">
+                    <div class="place-img-wrap">
+                        <span class="place-cat-badge arch">Fortress</span>
+                        <img src="assets/images/gallery/cholok-korgon.jpg"
+                             alt="Cholok-Korgon Fortress"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Ak-Tala District, Naryn
+                        </div>
+                        <h3 class="place-name">Cholok-Korgon Fortress</h3>
+                        <p class="place-desc">
+                            Ruins of a fortress along the Alabuga River, believed to
+                            date to the mid-19th century.
+                        </p>
+                        <div class="place-actions">
+                            <button class="place-link place-detail-btn" data-place="cholokkorgon">
+                                More Details <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <a href="map-kg.html?site=Крепость%20Чолок-Коргон" class="place-link place-map-link">
+                                Show on Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Koshoy-Korgon (image pending) -->
+                <div class="place-card">
+                    <div class="place-img-wrap">
+                        <span class="place-cat-badge arch">Settlement</span>
+                        <img src="assets/images/gallery/koshoy-korgon.jpg"
+                             alt="Koshoy-Korgon"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> At-Bashy District, Naryn
+                        </div>
+                        <h3 class="place-name">Koshoy-Korgon</h3>
+                        <p class="place-desc">
+                            An ancient fortified settlement linked to the epic hero
+                            Koshoy, with a small museum on site.
+                        </p>
+                        <div class="place-actions">
+                            <button class="place-link place-detail-btn" data-place="koshoykorgon">
+                                More Details <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <a href="map-kg.html?site=Кошой-Коргон" class="place-link place-map-link">
+                                Show on Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-cta">
+            <a href="map-kg.html" class="btn-outline">
+                See All 325 Sites <i class="fa-solid fa-map"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER (simplified to one row) ================= -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <span>&copy; 2026 Heritage of Kyrgyzstan</span>
+            <span>Built with Leaflet.js &amp; open data</span>
+        </div>
+    </footer>
+
+    <!-- ================= SITE DETAIL MODAL ================= -->
+    <div class="site-modal" id="siteModal">
+        <div class="site-modal-overlay"></div>
+        <div class="site-modal-content">
+            <button class="site-modal-close" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="site-modal-img-wrap">
+                <img id="modalImg" src="" alt="">
+                <span class="place-cat-badge" id="modalBadge" style="background:#12355B;"></span>
+            </div>
+            <div class="site-modal-body">
+                <div class="place-region" id="modalRegion"></div>
+                <h3 id="modalTitle"></h3>
+                <p id="modalText"></p>
+                <a href="#" id="modalMapLink" class="btn-outline">
+                    View on Map <i class="fa-solid fa-map"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

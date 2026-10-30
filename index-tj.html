@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/transitions.css">
+    <script src="assets/js/transitions.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage of Tajikistan</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- CSS (same shared stylesheet as the Kyrgyzstan homepage — nothing country-specific in it) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav.css">
+    <!-- JS -->
+    <script src="assets/js/main-tj.js?v=2" defer></script>
+    <script src="assets/js/mobile-nav.js" defer></script>
+</head>
+<body>
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar">
+        <a href="index-tj.html" class="logo">Heritage Tajikistan</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-country">
+                <details>
+                    <summary>Tajikistan <span>&#9662;</span></summary>
+                    <div class="country-menu">
+                        <a href="index-kg.html">Kyrgyzstan</a>
+                        <a href="index-tj.html">Tajikistan</a>
+                        <a href="index-kz.html">Kazakhstan</a>
+                    </div>
+                </details>
+            </li>
+            <li><a href="map-tj.html">Interactive Map</a></li>
+            <li><a href="gallery-tj.html">Gallery</a></li>
+            <li><a href="panorama-tj.html">Panorama</a></li>
+            <li><a href="videos-tj.html">Videos</a></li>
+            <li><a href="about-tj.html">About</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Heritage of Tajikistan</h1>
+            <p>
+                Discover the country's remarkable cultural and historical
+                heritage through interactive maps, photography,
+                virtual tours and immersive experiences.
+            </p>
+            <a href="map-tj.html" class="btn">Explore Interactive Map</a>
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-angles-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= STATS BAR ================= -->
+    <!-- Numbers below are placeholders only. main-tj.js fetches assets/data/heritage_sites_tj.geojson
+         at load time and overwrites data-target on each span based on the real dataset.
+         data-stat identifies which figure each span represents — don't remove it. -->
+    <section class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-number" data-stat="mapped" data-target="0">0+</span>
+                <span class="stat-label">Heritage Sites Mapped</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-stat="categories" data-target="0">0</span>
+                <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-stat="total" data-target="0">0</span>
+                <span class="stat-label">Sites in Source Dataset</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURED PLACES ================= -->
+    <section class="featured-section">
+        <div class="section-header">
+            <span class="section-tag">Featured</span>
+            <h2>Two Places to Start With</h2>
+            <p>A small taste of what's on the map — explore the full collection for the rest.</p>
+        </div>
+
+        <div class="places-track-wrap">
+            <div class="places-track" id="placesTrack">
+                <!-- Card 1: Hisor Fortress -->
+                <div class="place-card">
+                    <div class="place-img-wrap">
+                        <span class="place-cat-badge arch">Fortress</span>
+                        <img src="assets/images/gallery/hisor-fortress.jpg"
+                             alt="Hisor Fortress"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Hisor District
+                        </div>
+                        <h3 class="place-name">Hisor Fortress</h3>
+                        <p class="place-desc">
+                            An ancient citadel near Dushanbe, rebuilt in the 18th
+                            century on foundations stretching back over two millennia.
+                        </p>
+                        <div class="place-actions">
+                            <button class="place-link place-detail-btn" data-place="hisor">
+                                Show Detail <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <a href="map-tj.html?site=Hisor%20Fortress" class="place-link place-map-link">
+                                Show on Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Pamir Highway -->
+                <div class="place-card">
+                    <div class="place-img-wrap">
+                        <span class="place-cat-badge monument">Landmark Route</span>
+                        <img src="assets/images/gallery/pamir-highway.jpg"
+                             alt="Pamir Highway"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Gorno-Badakhshan (GBAO)
+                        </div>
+                        <h3 class="place-name">Pamir Highway</h3>
+                        <p class="place-desc">
+                            One of the world's highest roads, climbing through the
+                            Pamirs to connect remote Wakhan valley settlements.
+                        </p>
+                        <div class="place-actions">
+                            <button class="place-link place-detail-btn" data-place="pamirhighway">
+                                Show Detail <i class="fa-solid fa-circle-info"></i>
+                            </button>
+                            <a href="map-tj.html?site=Pamir%20Highway" class="place-link place-map-link">
+                                Show on Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-cta">
+            <a href="map-tj.html" class="btn-outline">
+                See All Sites <i class="fa-solid fa-map"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= EXPLORE MORE ================= -->
+    <section class="explore-section">
+        <div class="section-header">
+            <span class="section-tag">Keep Exploring</span>
+            <h2>More Ways to Experience the Heritage</h2>
+        </div>
+        <div class="explore-grid">
+            <a href="panorama-tj.html" class="explore-card">
+                <span class="explore-icon icon-navy"><i class="fa-solid fa-street-view"></i></span>
+                <h3>Panorama</h3>
+                <p>Step into 360° views of key sites</p>
+            </a>
+            <a href="gallery-tj.html" class="explore-card">
+                <span class="explore-icon icon-red"><i class="fa-solid fa-images"></i></span>
+                <h3>Gallery</h3>
+                <p>Browse photography from across the country</p>
+            </a>
+            <a href="videos-tj.html" class="explore-card">
+                <span class="explore-icon icon-gold"><i class="fa-solid fa-video"></i></span>
+                <h3>Videos</h3>
+                <p>Watch short documentaries and site tours</p>
+            </a>
+            <a href="about-tj.html" class="explore-card">
+                <span class="explore-icon icon-brown"><i class="fa-solid fa-circle-info"></i></span>
+                <h3>About</h3>
+                <p>The story and data behind this project</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">Heritage Tajikistan</div>
+                <p>An interactive archive of Tajikistan's historical and cultural monuments, built from open data and field research.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="map-tj.html">Interactive Map</a></li>
+                    <li><a href="gallery-tj.html">Gallery</a></li>
+                    <li><a href="panorama-tj.html">Panorama</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Project</h4>
+                <ul>
+                    <li><a href="about-tj.html">About</a></li>
+                    <li><a href="videos-tj.html">Videos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Heritage of Tajikistan</span>
+            <span>Built with Leaflet.js &amp; open data</span>
+        </div>
+    </footer>
+
+    <!-- ================= SITE DETAIL MODAL ================= -->
+    <div class="site-modal" id="siteModal">
+        <div class="site-modal-overlay"></div>
+        <div class="site-modal-content">
+            <button class="site-modal-close" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="site-modal-img-wrap">
+                <img id="modalImg" src="" alt="">
+                <span class="place-cat-badge" id="modalBadge" style="background:#12355B;"></span>
+            </div>
+            <div class="site-modal-body">
+                <div class="place-region" id="modalRegion"></div>
+                <h3 id="modalTitle"></h3>
+                <p id="modalText"></p>
+                <a href="#" id="modalMapLink" class="btn-outline">
+                    View on Map <i class="fa-solid fa-map"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

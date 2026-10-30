@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage of Kazakhstan</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- JS -->
+    <script src="assets/js/main-kz.js" defer></script>
+</head>
+<body>
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar">
+        <a href="index-kz.html" class="logo">Heritage Kazakhstan</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-country">
+                <details>
+                    <summary>Kazakhstan <span>&#9662;</span></summary>
+                    <div class="country-menu">
+                        <a href="index-kg.html">Kyrgyzstan</a>
+                        <a href="index-tj.html">Tajikistan</a>
+                        <a href="index-kz.html">Kazakhstan</a>
+                    </div>
+                </details>
+            </li>
+            <li><a href="map-kz.html">Interactive Map</a></li>
+            <li><a href="gallery-kz.html">Gallery</a></li>
+            <li><a href="panorama-kz.html">Panorama</a></li>
+            <li><a href="videos-kz.html">Videos</a></li>
+            <li><a href="about-kz.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Heritage of Kazakhstan</h1>
+            <p>
+                Discover the country's remarkable cultural and historical
+                heritage through interactive maps, photography,
+                virtual tours and immersive experiences.
+            </p>
+            <a href="map-kz.html" class="btn">Explore Interactive Map</a>
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-angles-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= STATS BAR ================= -->
+    <section class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <!-- TODO: replace 0 with real Kazakhstan site count once map-kz data is finalized -->
+                <span class="stat-number" data-target="0">0+</span>
+                <span class="stat-label">Heritage Sites Mapped</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <!-- TODO: replace 0 with real source dataset count -->
+                <span class="stat-number" data-target="0">0</span>
+                <span class="stat-label">Sites in Source Dataset</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURED PLACES (simplified: no badges, no modal, one link each) ================= -->
+    <!-- TODO: swap these two placeholder cards for real Kazakhstan sites + images -->
+    <section class="featured-section">
+        <div class="section-header">
+            <span class="section-tag">Featured</span>
+            <h2>Two Places to Start With</h2>
+            <p>A small taste of what's on the map — explore the full collection for the rest.</p>
+        </div>
+
+        <div class="places-track-wrap">
+            <div class="places-track" id="placesTrack">
+                <!-- Card 1: TODO replace -->
+                <a href="map-kz.html?site=Mausoleum%20of%20Khoja%20Ahmed%20Yasawi" class="place-card">
+                    <div class="place-img-wrap">
+                        <img src="assets/images/gallery/yasawi-mausoleum.jpg"
+                             alt="Mausoleum of Khoja Ahmed Yasawi"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Turkistan Region
+                        </div>
+                        <h3 class="place-name">Mausoleum of Khoja Ahmed Yasawi</h3>
+                        <p class="place-desc">
+                            A UNESCO World Heritage site built by order of Timur in the
+                            14th century, one of the great masterpieces of Timurid architecture.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Card 2: TODO replace -->
+                <a href="map-kz.html?site=Charyn%20Canyon" class="place-card">
+                    <div class="place-img-wrap">
+                        <img src="assets/images/gallery/charyn-canyon.jpg"
+                             alt="Charyn Canyon"
+                             onerror="this.parentElement.classList.add('img-fallback'); this.remove();">
+                    </div>
+                    <div class="place-body">
+                        <div class="place-region">
+                            <i class="fa-solid fa-location-dot"></i> Almaty Region
+                        </div>
+                        <h3 class="place-name">Charyn Canyon</h3>
+                        <p class="place-desc">
+                            A dramatic red-rock canyon system carved by the Charyn River,
+                            often compared to a smaller Grand Canyon of Central Asia.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="featured-cta">
+            <!-- TODO: update the number once your Kazakhstan site count is final -->
+            <a href="map-kz.html" class="btn-outline">
+                See All Sites <i class="fa-solid fa-map"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER (simplified to one row) ================= -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <span>&copy; 2026 Heritage of Kazakhstan</span>
+            <span>Built with Leaflet.js &amp; open data</span>
+        </div>
+    </footer>
+
+</body>
+</html>
